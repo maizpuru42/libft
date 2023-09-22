@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maizpuru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/23 12:31:23 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/07/23 14:56:59 by maizpuru         ###   ########.fr       */
+/*   Created: 2023/07/17 16:19:47 by maizpuru          #+#    #+#             */
+/*   Updated: 2023/09/21 13:29:02 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_calloc(int num_elements, int element_size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	ptr = malloc (num_elements * element_size);
+	ptr = malloc (count * size);
 	if (ptr == '\0')
 		return (ptr);
-	ft_bzero(ptr, num_elements * element_size);
+	ft_bzero(ptr, count * size);
 	return (ptr);
 }

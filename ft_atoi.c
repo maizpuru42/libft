@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maizpuru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/23 12:31:23 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/07/23 14:56:59 by maizpuru         ###   ########.fr       */
+/*   Created: 2023/09/21 13:28:42 by maizpuru          #+#    #+#             */
+/*   Updated: 2023/09/22 12:26:42 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	sign;
 	int	result;

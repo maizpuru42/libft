@@ -7,7 +7,7 @@ NAME = libft.a
 # Variables for compiling, archiving and removing
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-AR = ar rcs
+AR = ar -rcs
 RM = rm -f
 
 # This is the list of sources to work with when creating the program
@@ -37,15 +37,15 @@ all: $(NAME)
 
 # This builds the static library libft.a using the objects listed in $(OBJECTS)
 $(NAME):$(OBJECTS)
-	$(AR) $@ $?
+	$(AR) $@ $(OBJECTS)
 
 # This builds the static library libft.a using the objects listed in $(BOBJECTS)
-bonus: $(OBJECTS) $(BOBJECTS)
-	$(AR) $(NAME) $?
+bonus: $(BOBJECTS)
+	$(AR) $(NAME) $(BOBJECTS)
 
 # Applies the rules to follow when compiling sources into objects
 %.o:%.c
-	$(CC) $(CFLAGS) $?
+	$(CC) $(CFLAGS) -c $< -o $@
 
 # Removes all the .o files
 clean:

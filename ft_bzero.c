@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maizpuru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/23 12:31:23 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/07/23 14:56:59 by maizpuru         ###   ########.fr       */
+/*   Created: 2023/07/17 16:19:47 by maizpuru          #+#    #+#             */
+/*   Updated: 2023/09/21 13:28:58 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, int size)
+void	ft_bzero(void *s, size_t size)
 {
 	unsigned char	*string;
 
