@@ -6,13 +6,21 @@
 /*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 19:18:29 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/09/26 19:19:46 by maizpuru         ###   ########.fr       */
+/*   Updated: 2023/09/26 19:52:36 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	
+	while (*s != '\0')
+	{
+		if (*s == (char)c)
+		{
+			return ((char *)s);
+		}
+		s++;
+	}
+	return (0);
 }
