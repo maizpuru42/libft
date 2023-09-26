@@ -1,13 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maizpuru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/23 12:31:23 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/07/23 14:56:59 by maizpuru         ###   ########.fr       */
+/*   Created: 2023/09/26 18:39:30 by maizpuru          #+#    #+#             */
+/*   Updated: 2023/09/26 19:17:38 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-x
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+{
+	int	i;
+
+	i = 0;
+	if (!src || !dst)
+		return (0);
+	while (i < dstsize && src[i] != '\0')
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (i);
+}

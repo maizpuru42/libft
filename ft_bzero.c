@@ -6,17 +6,17 @@
 /*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:19:47 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/09/21 13:28:58 by maizpuru         ###   ########.fr       */
+/*   Updated: 2023/09/26 16:50:41 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t size)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*string;
 
 	string = (unsigned char *)s;
-	while (size-- > 0)
+	while (n-- > 0)
 		*string++ = '\0';
 }

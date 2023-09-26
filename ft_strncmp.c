@@ -6,13 +6,13 @@
 /*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 18:50:00 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/09/21 13:30:09 by maizpuru         ###   ########.fr       */
+/*   Updated: 2023/09/26 17:19:21 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	if (n == 0)
 	{

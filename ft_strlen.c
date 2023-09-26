@@ -6,13 +6,13 @@
 /*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 12:08:23 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/09/21 13:30:04 by maizpuru         ###   ########.fr       */
+/*   Updated: 2023/09/26 17:18:02 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	len;
 

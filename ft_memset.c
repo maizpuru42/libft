@@ -1,13 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maizpuru <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/23 12:31:23 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/07/23 14:56:59 by maizpuru         ###   ########.fr       */
+/*   Created: 2023/09/22 13:08:31 by maizpuru          #+#    #+#             */
+/*   Updated: 2023/09/25 10:56:16 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-x
+#include "libft.h"
+
+void	*ft_memset(void *b, int c, size_t len)
+{
+	unsigned char	*p;
+
+	if (len == 0)
+	{
+		return (b);
+	}
+	p = (unsigned char *)b;
+	*p = (unsigned char)c;
+	ft_memset(p + 1, c, len - 1);
+	return (b);
+}
