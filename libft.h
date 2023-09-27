@@ -6,7 +6,7 @@
 /*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 12:08:23 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/09/26 19:26:41 by maizpuru         ###   ########.fr       */
+/*   Updated: 2023/09/27 11:38:29 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int				ft_toupper(int c);
 void			*ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memset(void *b, int c, size_t len);
 void			*ft_memcpy(void	*dst, const void *src, size_t n);
-char			*strchr(const char *s, int c);
+char			*ft_strchr(const char *s, int c);
+char			*ft_strrchr(const char *s, int c);
 
 #endif
