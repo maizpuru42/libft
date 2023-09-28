@@ -6,7 +6,7 @@
 /*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 19:18:29 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/09/27 11:36:29 by maizpuru         ###   ########.fr       */
+/*   Updated: 2023/09/28 10:23:49 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,8 @@ char	*ft_strchr(const char *s, int c)
 		}
 		s++;
 	}
-	return (0);
+	if ((c == '\0') && (*s == '\0'))
+		return ((char *)s);
+	else
+		return (0);
 }

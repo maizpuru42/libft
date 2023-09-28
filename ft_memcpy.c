@@ -6,7 +6,7 @@
 /*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 09:32:24 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/09/26 17:19:55 by maizpuru         ###   ########.fr       */
+/*   Updated: 2023/09/28 13:12:45 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,13 @@
 void	*ft_memcpy(void	*dst, const void *src, size_t n)
 {
 	unsigned int	i;
-	char			*cdst;
-	char			*csrc;
 
-	cdst = (char *) dst;
-	csrc = (char *) src;
 	i = 0;
+	if (dst == src || !n)
+		return (dst);
 	while (i < n)
 	{
-		cdst[i] = csrc[i];
+		*(char *)(dst + i) = *(char *)(src + i);
 		i++;
 	}
 	return (dst);

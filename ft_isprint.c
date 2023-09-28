@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/17 19:16:00 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/09/27 11:21:26 by maizpuru         ###   ########.fr       */
+/*   Created: 2023/09/28 10:37:29 by maizpuru          #+#    #+#             */
+/*   Updated: 2023/09/28 10:48:01 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }
