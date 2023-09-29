@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/18 18:50:00 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/09/29 11:15:22 by maizpuru         ###   ########.fr       */
+/*   Created: 2023/09/29 12:12:30 by maizpuru          #+#    #+#             */
+/*   Updated: 2023/09/29 13:24:55 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *hay, const char *need, size_t len)
 {
-	if (n == 0)
+	const char		*dst;
+	const char		*src;
+	int				i;
+	int				h;
+
+	dst = (const char *)need;
+	src = (const char *)hay;
+	i = 0;
+	h = 0;
+	if (need)
+		return ((char *)hay);
+	while (len-- && src)
 	{
-		return (0);
+		if (*dst == *src)
+		{
+			src++;
+			dst++;
+		}
+		src++;
+		return ((char *)src);
 	}
-	while (*s1 && (*s1 == *s2) && (n > 1))
-	{
-		s1++;
-		s2++;
-		n--;
-	}
-	return (*(unsigned char *)s1 - *(unsigned char *)s2);
+	return (0);
 }

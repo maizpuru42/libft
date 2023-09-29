@@ -6,7 +6,7 @@
 /*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 12:08:23 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/09/28 10:47:50 by maizpuru         ###   ########.fr       */
+/*   Updated: 2023/09/29 12:14:17 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,9 @@ void			*ft_memset(void *b, int c, size_t len);
 void			*ft_memcpy(void	*dst, const void *src, size_t n);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
+void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
+void			*ft_memchr(const void *s, int c, size_t n);
+int				ft_memcmp(const void *s1, const void *s2, size_t n);
+char			*ft_strnstr(const char *hay, const char *need, size_t len);
 
 #endif
