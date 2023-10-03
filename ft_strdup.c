@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/29 12:12:30 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/10/03 12:43:04 by maizpuru         ###   ########.fr       */
+/*   Created: 2023/10/03 12:51:28 by maizpuru          #+#    #+#             */
+/*   Updated: 2023/10/03 13:37:24 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char	*ft_strnstr(const char *hay, const char *need, size_t len)
+char	*ft_strdup(const char *s1)
 {
-	unsigned long	i;
-	int				j;
+	int		len;
+	char	*s2;
 
-	j = 0;
-	i = 0;
-	if (!*need)
-		return ((char *)hay);
-	while (hay[i])
+	len = 0;
+	while (s1[len])
+		len++;
+	s2 = malloc(sizeof(char) * len + 1);
+	if (!s2)
+		return (0);
+		len = 0;
+	while (s1[len])
 	{
-		j = 0;
-		while (hay[i] == need[j] && hay[i] && i < len)
-		{
-			i++;
-			j++;
-		}
-		if (!need[j])
-			return ((char *)&hay[i - j]);
-		i = (i - j) + 1;
+		s2[len] = s1[len];
+		len++;
 	}
-	return (NULL);
+	s2[len] = '\0';
+	return (s2);
 }
