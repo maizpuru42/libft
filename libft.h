@@ -6,7 +6,7 @@
 /*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 12:08:23 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/10/05 19:37:56 by maizpuru         ###   ########.fr       */
+/*   Updated: 2023/10/06 10:22:40 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,7 @@ void			ft_putstr_fd(char const *s, int fd);
 char			*ft_itoa(int n);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putendl_fd(char *s, int fd);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif
