@@ -22,7 +22,7 @@ SOURCES = \
 # These are the bonus sources we create for the project
 BSOURCES = \
 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-	#ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+	ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 # Converts all the sources or .c files into objects or .o files
 OBJECTS = $(SOURCES:.c=.o)
