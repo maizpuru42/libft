@@ -6,7 +6,7 @@
 /*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 11:53:01 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/10/10 12:00:23 by maizpuru         ###   ########.fr       */
+/*   Updated: 2023/10/10 12:42:43 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		free(current);
 		current = next;
 	}
-
 	*lst = 0;
 }
