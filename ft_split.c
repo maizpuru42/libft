@@ -6,7 +6,7 @@
 /*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 15:10:46 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/10/10 13:03:55 by maizpuru         ###   ########.fr       */
+/*   Updated: 2023/10/13 17:41:36 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,18 @@ size_t	ft_finder(char const *s, char c)
 	return (strnum);
 }
 
+char	**free_all(char **res, size_t i)
+{
+	while (i)
+	{
+		free(res[i]);
+		i--;
+	}
+	free(res[i]);
+	free(res);
+	return (NULL);
+}
+
 char	**ft_split(const char *s, char c)
 {
 	char	**res;
@@ -52,7 +64,12 @@ char	**ft_split(const char *s, char c)
 			len = 0;
 			while (*s && *s != c && ++len)
 				s++;
-			res[i++] = ft_substr(s - len, 0, len);
+			res[i] = ft_substr(s - len, 0, len);
+			if (!res[i])
+			{
+				return (free_all(res, i));
+			}
+			i++;
 		}
 		else
 			s++;
