@@ -6,14 +6,14 @@
 /*   By: maizpuru <maizpuru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 17:13:40 by maizpuru          #+#    #+#             */
-/*   Updated: 2023/09/26 19:21:59 by maizpuru         ###   ########.fr       */
+/*   Updated: 2024/03/26 20:59:55 by maizpuru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
-{	
+{
 	unsigned int	dest_len;
 	unsigned int	src_len;
 	unsigned int	total_len;
